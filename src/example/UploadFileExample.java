@@ -10,8 +10,10 @@ import java.io.InputStream;
 
 public class UploadFileExample {
 
+    private static final String ACCESS_TOKEN = "xgFFLalTs7AAAAAAAAAAXAFf3JJohqnWUncvFqkdXxgcyTI2oIqdYkdf0FyH6NFr";
+
     public static void main(String[] args) throws DbxException, IOException {
-        DbxClientV2 client = SdkUtil.createTestDbxClientV2();
+        DbxClientV2 client = SdkUtil.createTestDbxClientV2(ACCESS_TOKEN);
 
         InputStream in1 = new FileInputStream("test1.txt");
         InputStream in2 = new FileInputStream("test2.txt");
